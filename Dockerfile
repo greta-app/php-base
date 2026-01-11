@@ -15,6 +15,7 @@ RUN set -eux; \
     $PHPIZE_DEPS \
   ; \
   \
+  docker-php-ext-install pdo_mysql; \
   pecl install imagick; \
   docker-php-ext-enable imagick; \
   \
