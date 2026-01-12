@@ -12,10 +12,14 @@ RUN set -eux; \
     libmagickwand-6.q16-6 \
     libmagickcore-6.q16-6 \
     libmagickwand-dev \
+    libcurl4-openssl-dev \
+    libonig-dev \
+    libzip-dev \
+    zlib1g-dev \
     $PHPIZE_DEPS \
   ; \
   \
-  docker-php-ext-install pdo_mysql; \
+  docker-php-ext-install pdo_mysql gd curl mbstring zip fileinfo; \
   pecl install imagick; \
   docker-php-ext-enable imagick; \
   \
