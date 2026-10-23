@@ -1,4 +1,5 @@
-FROM php:8.4-fpm-bookworm
+# PHP 8.4.27 includes the PHP2Shell fixes (CVE-2026-109618 and CVE-2026-109619).
+FROM php:8.4.27-fpm-bookworm
 
 ARG COMPOSER_VERSION=2.9.3
 
